@@ -13,10 +13,11 @@ RUN apt-get update && apt-get install -y curl apt-transport-https wget && \
 RUN mkdir /sample-app
 WORKDIR /sample-app
 
-ADD Gemfile /sample-app/Gemfile
-ADD Gemfile.lock /sample-app/Gemfile.lock
+#ADD Gemfile /sample-app/Gemfile
+#ADD Gemfile.lock /sample-app/Gemfile.lock
+ADD Gemfile Gemfile.lock /sample-app/
 
-RUN gem install bundler:2.1.4
+RUN gem update --system && gem install bundler:2.1.4
 RUN bundle install
 
 ADD . /sample-app
