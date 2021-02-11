@@ -1,5 +1,5 @@
 
-#if Rails.env == 'development'
+if Rails.env == 'development'
 
   # (1..2).each do |i|
   #     Shop.create!(name: "ケーキ屋#{i}", email: "cake#{i}@cake.jp", auth_id: "#{i}" ,password: "password#{i}", phone_number: "0120#{i}00000", opening_hours: "10:00~19:00", address: "東京",)
@@ -208,4 +208,4 @@ end
      
     ]
   ) 
-#end
+end
