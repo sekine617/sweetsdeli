@@ -40,6 +40,5 @@ yarn-debug.log*
 /vendor/budle
 .env
 /ecs
-/app/assets/images
 /public/uploads/product
 /public/uploads/tmp
