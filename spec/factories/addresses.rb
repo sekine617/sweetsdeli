@@ -5,6 +5,6 @@ FactoryBot.define do
     address_city { "MyString" }
     address_street { "MyString" }
     address_building { "MyString" }
-    user { nil }
+    user_id { 1 }
   end
 end

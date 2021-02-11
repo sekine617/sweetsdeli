@@ -50,6 +50,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
   gem 'rspec_junit_formatter'
   gem 'webdrivers', '~> 3.0'
 end
@@ -62,7 +63,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
-  gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'rubocop', require: false
 end
