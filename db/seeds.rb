@@ -1,24 +1,19 @@
-# This  file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-if Rails.env == 'development'
+
+#if Rails.env == 'development'
+
   # (1..2).each do |i|
   #     Shop.create!(name: "ケーキ屋#{i}", email: "cake#{i}@cake.jp", auth_id: "#{i}" ,password: "password#{i}", phone_number: "0120#{i}00000", opening_hours: "10:00~19:00", address: "東京",)
   #     end
 
-#Shop.create!(name: 'ラミティエル', email: 'lamitiel@gmail.com', auth_id: '12345678', password: '87654321',
-#phone_number: '0120-000-000', opening_hours: '10:00~19:00', address: '東京都葛飾区新宿9丁目47 20番10号')
+Shop.create!(name: 'ラミティエル', email: 'lamitiel@gmail.com', auth_id: '12345678', password: '87654321',
+phone_number: '0120-000-000', opening_hours: '10:00~19:00', address: '東京都葛飾区新宿9丁目47 20番10号')
 
-#array = %w[チョコレート フルーツ タルト デコレーションケーキ カットケーキ イチゴ 生クリーム カスタードクリーム]
-#array.each do |tag|
-# tag_list = ActsAsTaggableOn::Tag.new
-#tag_list.name = tag
-# tag_list.save
-#end
+array = %w[チョコレート フルーツ タルト デコレーションケーキ カットケーキ イチゴ 生クリーム カスタードクリーム]
+array.each do |tag|
+ tag_list = ActsAsTaggableOn::Tag.new
+tag_list.name = tag
+ tag_list.save
+end
 
    
 
@@ -213,4 +208,4 @@ if Rails.env == 'development'
      
     ]
   ) 
-end
+#end
