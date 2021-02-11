@@ -1,0 +1,45 @@
+<div class="mt-5">
+  <div class="card contents">
+    <div class="card-body contents">
+        <%= render partial: 'menu', locals: { user: @user } %>
+        <div class="py-5">
+          <div class="card">
+            <div class="card-header">
+              <h4>プロフィール</h4>
+            </div>
+              <div class="card-body">
+                <div class="form-group mb-4">
+                    <label>お名前</label>
+                    <div class="text-left">
+                       <%= @user.last_name %> <%= @user.first_name %>様
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>お届け先住所</label>
+                   <div class="text-left mb-2">
+                     <% if @address.present? %>
+                        〒<%= @address.postcode %><br>
+                       <%= @address.prefecture_name %>
+                       <%= @address.address_city %>
+                       <%= @address.address_street %>
+                       <%= @address.address_building %><br>
+                       <% else %>
+                       <p>現在住所は登録されていません</p>
+                     <% end %>
+                   </div>
+                      <%= link_to '変更する', edit_user_path(current_user.id), class: 'edit-btn' %>
+                </div>
+                <hr>
+                <div class="form-group">
+                  <label>メールアドレス</label>
+                  <div class="text-left">
+                   <%= @user.email %><br>
+                   <%= link_to '変更する',edit_user_registration_path  , class: 'edit-btn' %>
+                  </div>
+                </div>
+                <br>
+              </div> 
+        </div>
+      </div>
+  </div>
+</div>

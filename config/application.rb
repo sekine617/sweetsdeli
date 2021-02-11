@@ -23,6 +23,7 @@ module SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -31,5 +32,7 @@ module SampleApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+        config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
   end
 end

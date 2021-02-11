@@ -1,0 +1,30 @@
+  <section class="jumbotron text-center">
+      <div class="shop-img">
+      </div>
+  </section>
+
+  <div class="bg-white">
+  <div class="container text-center">
+  <h2 class="py-5"><%= shop.name %></h2>
+  </div>
+  </div>
+  <div class="contents">
+<%= render partial: 'shopInfo', locals: {shop: @shop} %>
+</div>
+  <div class="contents">
+  <div class="album pt-5">
+      <div class="">
+          <div class="card border-light mb-3">
+              <div class="card-header">
+                  <h4><%= @shop.name %>の商品一覧<h4>
+              </div>
+              <div class="card-body container">
+                  <div class="row">
+                      <%= render partial: 'products/productIndex', locals: { products: @products } %>
+                  </div>
+              </div>
+              <%= paginate @products %>
+          </div>
+      </div>
+  </div>
+  </div>

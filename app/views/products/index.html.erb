@@ -1,0 +1,27 @@
+  <div class="row contents">
+      <div class="col-md-3 category-box">
+          <div class="card" style="width: 17rem;">
+              <div class="card-header">
+                  カテゴリー
+              </div>
+              <ul class="list-group list-group-flush">
+                  <% @tags.each do |tag| %>
+                  <li class="list-group-item">
+                      <%= link_to tag, products_path(tag_name: tag.name) %>
+                  </li>
+                  <% end %>
+              </ul>
+          </div>
+      </div>
+
+      <div class="col-md-9">
+          <div class="album pt-5">
+              <div class="row">
+                  <%= render partial: 'products/productIndex', locals: { products: @products } %>
+              </div>
+          </div>
+          <div class="bg-white paginate text-center center-block">
+          <%= paginate @products %>
+          </div>
+      </div>
+  </div>

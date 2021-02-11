@@ -1,0 +1,39 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        last_name: 姓
+        first_name: 名
+        last_hurigana: セイ
+        first_hurigana: メイ
+        password: パスワード
+        password_confirmation: パスワード（確認）
+        email: メールアドレス
+        current_password: 現在のパスワード
+      board:
+        name: 名前
+        title: タイトル
+        body: 本文
+      comment:
+        name: 名前
+        comment: コメント
+      product:
+        name: 商品名
+        price: 価格
+        image: 商品画像
+        description: 商品説明
+        quantity_per_day: 1日の提供数
+      order:
+        receipt_date: 受け取り希望日
+        receipt_time: 受け取り希望時間
+        postcode: 郵便番号
+        prefecture_code: 都道府県
+        address_city: 市区町村
+        address_street: 番地
+  views:
+    pagination:
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...

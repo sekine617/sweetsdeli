@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SampleApp</title>
+
+<head>
+    <title>App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'orders', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/d1708ebc12.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
+<body>
+    <%= render 'header' %>
+
+    <% if flash[:notice] %>
+    <div class="alert alert-primary"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] %>
+    <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
     <%= yield %>
-  </body>
+
+    <%= render 'footer' %>
+</body>
+
 </html>

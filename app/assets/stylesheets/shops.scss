@@ -1,0 +1,61 @@
+// Place all the styles related to the shop controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.shop-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shop-table-tr {
+  border-bottom: solid 2px white;
+}
+
+.tr-last {
+  border-bottom: none;
+}
+
+.shop-table-th {
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.shop-table-th :after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.shop-table-td {
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+.shop_table {
+  width: 70%;
+}
+
+.jumbotron {
+  background-image: url("/assets/shop1.jpg");
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+}
+.shop-img {
+  height: 300px;
+}

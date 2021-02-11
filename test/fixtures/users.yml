@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  last_name       :string(255)      not null
+#  first_name      :string(255)      not null
+#  last_hurigana   :string(255)      not null
+#  first_hurigana  :string(255)      not null
+#  password_digest :string(255)      not null
+#  email           :string(255)      not null
+#  phone_number    :string(255)      not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+one:
+  last_name: MyString
+  first_name: MyString
+  last_hurigana: MyString
+  first_hurigana: MyString
+  password_digest: MyString
+  email: MyString
+  phone_number: MyString
+
+two:
+  last_name: MyString
+  first_name: MyString
+  last_hurigana: MyString
+  first_hurigana: MyString
+  password_digest: MyString
+  email: MyString
+  phone_number: MyString
